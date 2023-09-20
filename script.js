@@ -1,11 +1,11 @@
-let currentInput = "0"; // Initialize the current input as "0"
-let operator = null; // Initialize the operator as null
+let currentInput = "0"; 
+let operator = null; 
 let prevInput = null;
 
-// Function to handle button clicks
+
 function handleclick(value) {
     if (value === "=") {
-        // Handle the "=" button to perform calculations
+       
         if (operator && prevInput) {
             currentInput = calculateResult(parseFloat(prevInput), parseFloat(currentInput), operator);
             operator = null;
