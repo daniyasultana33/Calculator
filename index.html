@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="calculator">
+
+        <div class="screen" onclick="handleclick()">
+            0
+
+        </div>
+        <div class="button">
+            <div class="first">
+                <div class="one" onclick="handleclick(1)">1</div>
+                <div class="two" onclick="handleclick(2)">2</div>
+                <div class="three" onclick="handleclick(3)">3</div>
+                <div class="sub" onclick="handleclick('-')">-</div>
+
+            </div>
+            <div class="second">
+                <div class="four" onclick="handleclick(4)">4</div>
+                <div class="five" onclick="handleclick(5)">5</div>
+                <div class="six" onclick="handleclick(6)">6</div>
+                <div class="multiply" onclick="handleclick('*')">*</div>
+
+            </div>
+            <div class="third">
+                <div class="seven" onclick="handleclick(7)">7</div>
+                <div class="eight" onclick="handleclick(8)">8</div>
+                <div class="nine" onclick="handleclick(9)">9</div>
+                <div class="add" onclick="handleclick('+')">+</div>
+
+            </div>
+            <div class="last">
+                <div class="zero" onclick="handleclick(0)"> 0 </div>
+                <div class="divide" onclick="handleclick('/')"> / </div>
+                <div class="equal" onclick="handleclick('=')">=</div>
+                <div class="AC" onclick="handleclick('AC')">AC</div>
+            </div>
+        </div>
+        <script src="./script.js" charset="UTF-8"></script>
+</body>
+
+</html>
