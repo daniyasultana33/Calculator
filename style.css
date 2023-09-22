@@ -3,12 +3,13 @@
     flex-direction: column;
     width: 30vw;
     height: 80vh;
-    background: rgb(131, 58, 180);
-    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(252, 176, 69, 1) 0%);
+    /* background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(252, 176, 69, 1) 0%); */
     margin-left: 25vw;
     margin-top: 5vh;
     box-shadow: 10px 10px rgb(13, 20, 23);
     border-radius: 20px;
+    background-image: url('bg-calci.jpg');
     /*filter: drop-shadow(0 0 0.75rem crimson);*/
 }
 
@@ -44,6 +45,7 @@ body {
     color: white;
     /* background-color: rgb(68, 68, 68); */
     border-radius: 50px;
+    background-image: url('bg-calci.jpg');
 }
 
 .first {
@@ -57,6 +59,7 @@ body {
     border: 2px bold rgb(228, 217, 217);
     background-color: black;
     border-radius: 50px;
+    background-image: url('bg-calci.jpg');
 }
 
 .second {
@@ -69,6 +72,7 @@ body {
     border: 2px bold black;
     background-color: black;
     border-radius: 50px;
+    background-image: url('bg-calci.jpg');
 }
 
 .third {
@@ -82,6 +86,7 @@ body {
     background-color: black;
     /* background-color: rgb(223, 203, 207); */
     border-radius: 50px;
+    background-image: url('bg-calci.jpg');
 }
 
 .last {
@@ -94,6 +99,7 @@ body {
     border: 2px bold black;
     background-color: black;
     border-radius: 34px;
+    background-image: url('bg-calci.jpg');
     /* background-color: rgb(223, 203, 207); */
 }
 
@@ -137,7 +143,7 @@ body {
     width: 23%;
     background: rgb(131, 58, 180);
     background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(252, 176, 69, 1) 0%);
-    border-radius: 30%;
+    border-radius: 40%;
     border: 2px bold black;
     font-size: xx-large;
     font-weight: 800;
