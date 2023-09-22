@@ -1,60 +1,29 @@
-let currentInput = "0"; 
-let operator = null; 
-let prevInput = null;
-
-
+let currentInput = ""; 
+let result = null;
 function handleclick(value) {
-    if (value === "=") {
-       
-        if (operator && prevInput) {
-            currentInput = calculateResult(parseFloat(prevInput), parseFloat(currentInput), operator);
-            operator = null;
-            prevInput = null;
-        }
-    } else if (value === "AC") {
-        // Handle the "AC" button to clear the calculator
-        currentInput = "0";
-        operator = null;
-        prevInput = null;
-    } else if (["+", "-", "*", "/"].includes(value)) {
-        // Handle operators
-        if (prevInput && operator) {
-            // If an operator and previous input exist, calculate the result
-            currentInput = calculateResult(parseFloat(prevInput), parseFloat(currentInput), operator);
-            operator = value;
-            prevInput = currentInput;
-        } else {
-            operator = value;
-            prevInput = currentInput;
-        }
-    } else {
-        // Handle numeric input
-        if (currentInput === "0" || prevInput === "=") {
-            currentInput = value;
-        } else {
-            currentInput += value;
-        }
+  if (value === "AC") {
+    // Clear the input and result
+    currentInput = "";
+    result = null;
+  } else if (value === "=") {
+    try {
+      // Evaluate the expression and store the result
+      result = eval(currentInput);
+    } catch (error) {
+         // Handle any errors that occur during evaluation
+      result = "Error";
     }
+    currentInput = result.toString(); 
+  } else {
+    currentInput += value;
+  }
 
-    // Update the display
-    document.querySelector(".screen").textContent = currentInput;
+  // Update the screen with the current input or result
+  updateScreen(currentInput);
 }
 
-// Function to calculate the result
-function calculateResult(num1, num2, operator) {
-    switch (operator) {
-        case "+":
-            return (num1 + num2).toString();
-        case "-":
-            return (num1 - num2).toString();
-        case "*":
-            return (num1 * num2).toString();
-        case "/":
-            if (num2 === 0) {
-                return "Error";
-            }
-            return (num1 / num2).toString();
-        default:
-            return "Error";
-    }
+// Function to update the screen with the current input or result
+function updateScreen(value) {
+  const screen = document.querySelector(".screen");
+  screen.textContent = value;
 }
